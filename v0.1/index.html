@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="interface.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Incremental JavaScript in-Browser Idle Clicker Game</title>
+</head>
+<body>
+  <h1>Incremental JavaScript in-Browser Idle Clicker Game</h1>
+  <i>(What a mouthful!)</i>
+  <p>The goal of this game is to click until you can hire a team of professional, skilled and efficient clickers who will ultimately click for you, and one day allow your clicking business to run automatically.  Made with Javascript.</p>
+  <input type="button" value="Click" id="clicker"> Clicks: <span id="clicks">0</span>
+  <p>Click bots will click automatically.  You can buy them from the black market, but as demand goes up, so does the cost.</p>
+  <input type="button" value="Buy ClickBot" onClick="hire()"> Cost: <span id="clickerCost">25</span> clicks
+  <br>
+  ClickBots: <span id="clickers">0</span>
+  <br>
+  <hr>
+  <h2>Upgrades Store</h2>
+  <p>Just like in any idler game, here you can find useful upgrades</p>
+  <strong><em>Under Construction, don't waste your money</em></strong>
+  <br>
+  manual click value: <span id="clickVal">1</span>
+  <br>
+  <input type="button" value="click value + 1" id="upgClickVal"> Increases your clicking value by 1
+  <br>
+  <input type="button" value="click value x 2" id="doubleClickVal"> Doubles your clicking value
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

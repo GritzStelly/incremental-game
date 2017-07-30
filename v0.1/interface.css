@@ -1,0 +1,11 @@
+*{
+  transition:0.4s ease all;
+}
+body{
+  max-width:800px;
+}
+@media (min-width:800px){
+  body{
+    margin:auto;
+  }
+}
