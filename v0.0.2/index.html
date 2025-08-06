@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Incremental Javascript Browser Game</title>
+  <link rel="stylesheet" href="interface.css">
+</head>
+<body>
+  <h1>Incremental Javascript Browser Game</h1>
+  <p>Click until you have enough clicks to buy the private island</p>
+  <div id="clickDiv">
+    <h3>Click</h3>
+    <input type="button" value="Click" id="click">Clicks: <span id="clickCount">#</span>; Power: <span id="clickPower">#</span>
+  </div>
+  <div id="islandDiv">
+    <h3>Private Island</h3>
+    <input type="button" value="Buy Private Island">Cost: 1000000 Clicks
+  </div>
+  <div id="gambleDiv">
+    <h3>Gambling</h3>
+    <input type="button" value="Roll The Dice"><input type="button" value="Flip A Coin">Wager: <input type="text" value="Wager your Clicks" onClick="clear">
+  </div>
+  <div id="upgrades">
+    <h3>Upgrades</h3>
+    <div id="doubleClickPowerDiv">
+      <input type="button" value="Double Click Power">Cost: <span id="doubleClickPowerCost">#</span> Clicks
+    </div>
+  </div>
+  <!--End of Game-->
+  <script src="memory.js"></script>
+  <script src="functions.js"></script>
+  <script src="listeners.js"></script>
+  <script src="clock.js"></script>
+</body>
+</html>

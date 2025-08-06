@@ -1,37 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Incremental Javascript Browser Game</title>
   <link rel="stylesheet" href="interface.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Incremental Browser Game</title>
 </head>
 <body>
-  <h1>Incremental Javascript Browser Game</h1>
-  <p>Click until you have enough clicks to buy the private island</p>
-  <div id="clickDiv">
-    <h3>Click</h3>
-    <input type="button" value="Click" id="click">Clicks: <span id="clickCount">#</span>; Power: <span id="clickPower">#</span>
+  <h1>Incremental Browser Game</h1>
+  <h2>A fun game to play whenever you are bored.</h2>
+  Clicks: <span id="clickCounter">0</span>
+  <br>
+  Research Points: <span id="researchPoints">0</span>
+  <br>
+  <input type="button" value="Click" id="clickButton"> Requires 1 available device.  Click Power: <span id="clickPower">1</span> click per click
+  <br>
+  <input type="button" value="Research" id="researchButton"> Cost: <span id="researchCost">1</span> clicks
+  <br>
+  <span>&darr; To win the game, buy the private island below &darr;</span><br>
+  <input type="button" value="Buy Private Island" id="islandButton"> Cost: <span>1,000,000</span> Clicks
+  <br>
+  <hr>
+  <h3>Devices</h3>
+  <p>Devices can be smartphones, desktop or laptop computers, tablets and anything with a browser.  Devices are required to run a bot and can be upgraded to run more efficiently.  Susceptible to hardware and software malfunctions, as well as natural disasters, robbers and hackers.</p>
+  Available Devices: <span id="availableDevices">1</span>
+  <br>
+  Remaining Space: <span id="remainingSpace">1</span>
+  <br>
+  <input type="button" value="Buy a Device" id="buyDeviceButton"> cost: <span>200</span> clicks
+  <hr>
+  <h3>Bots</h3>
+  Bots running: <span id="botsRunning">0</span>
+  <p>Bots can either be purchased on a subscription, or created by researching and learning to code.  Each bot clicks once per second. Manually installed bots are suceptible to hackers, but rented bots are not as the manufacturer will repair them for you.  A higher research level will protect you against hackers</p>
+  <input type="button" value="Purchase Bot Subscription" id="rentBotButton"> <input type="button" value="Cancel 1" id="cancelSubButton"> Requires 1 available device and costs 50 clicks. Rented bots charge at the end of every minute of gameplay, regardless of when you buy them.
+  <br>
+  <input type="button" value="Install Bot" id="installBotButton"> <input disabled type="button" value="Uninstall 1" id="uninstall"> Requires 1 available device and 10 research points;
+  Bots: <span>0</span>
+  <hr>
+  <h3>Upgrades</h3>
+  <p>These upgrades will enhance your gameplay, but come at a cost! Requires 1 available device to install the upgrade.</p>
+  <input type="button" value="Increase click power by 1" id="incrementClickPowerButton"> Requires <span id="reqResearchLinearClickPower">1</span> research points.
+  <br>
+  <input type="button" value="Double click power" id="doubleClickPowerButton"> Cost: <span id="doubleClickPowerCost">500</span> Clicks.
+  <br>
+  <input disabled type="button" value="Unlock Hold to Click" id="holdToClick"> Cost: <span>250,000</span> Clicks.</input>
+  <br>
+  <input type="button" value="Write Uninstall script" id="writeUninstallButton"> Requires <span>36</span> research points.
+  <br>
+  <input type="button" value="Buy Commas" id="commaButton">Cost: 10,000 clicks.
+  <hr>
+  <h3>Buildings</h3>
+  <p>Buildings are somewhere to put additional devices. One building can hold 4 devices  Susceptible to robbers and natural disasters.  You lose any devices in the building if you can't pay for it.</p>
+  <input type="button" value="Rent a Building"> Cost: 2,000 clicks up front and 200 per minute.
+  <br>
+  <input type="button" value="Purchase a Building" id="purchaseBuildingButton"> Cost: 5,000 clicks once and 200 clicks property tax per hour.
+  <button id="zero" onClick="clicks.count=0;"></button>
+  <hr>
+  <h3>Debug Screen</h3>
+  <div>
+    <pre id="debug"></pre>
   </div>
-  <div id="islandDiv">
-    <h3>Private Island</h3>
-    <input type="button" value="Buy Private Island">Cost: 1000000 Clicks
-  </div>
-  <div id="gambleDiv">
-    <h3>Gambling</h3>
-    <input type="button" value="Roll The Dice"><input type="button" value="Flip A Coin">Wager: <input type="text" value="Wager your Clicks" onClick="clear">
-  </div>
-  <div id="upgrades">
-    <h3>Upgrades</h3>
-    <div id="doubleClickPowerDiv">
-      <input type="button" value="Double Click Power">Cost: <span id="doubleClickPowerCost">#</span> Clicks
-    </div>
-  </div>
-  <!--End of Game-->
-  <script src="memory.js"></script>
-  <script src="functions.js"></script>
-  <script src="listeners.js"></script>
-  <script src="clock.js"></script>
+  <!--end of game-->
+  <script type="text/javascript" src="utils.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
